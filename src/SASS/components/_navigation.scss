@@ -1,0 +1,23 @@
+.navigation {
+    ul {
+        display: flex;
+        justify-content: flex-end;
+        a{
+            display: flex;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            height: 34px;
+            width: 136px;
+
+            li{
+            color: $primarycolor;
+            font-size: 24px;
+            }
+        }
+    }
+};
+
+.navActive {
+    text-decoration: underline solid $primarycolor;
+}

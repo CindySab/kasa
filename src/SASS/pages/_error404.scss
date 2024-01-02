@@ -1,0 +1,22 @@
+.error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 139px;
+    margin-top: 139px;
+    gap: 139px;
+    color: $primarycolor;
+    .errorNumber{
+        font-size: 288px;
+        font-weight: 700;
+    }
+    .oups{
+        font-size: 36px;
+    }
+    .errorAccueil {
+        font-size: 18px;
+        color: $primarycolor;
+        text-decoration: underline solid $primarycolor;
+    }
+};
+
