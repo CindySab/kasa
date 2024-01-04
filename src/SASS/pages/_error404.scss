@@ -1,7 +1,6 @@
 .error {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    max-width: 100%;
+    @include flexColumn;
     margin-bottom: 139px;
     margin-top: 139px;
     gap: 139px;

@@ -5,7 +5,18 @@ $font: 'Montserrat', sans-serif;
 $primarycolor: #FF6060;
 $secondarycolor: #FFF;
 
+@mixin flexRow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+@mixin flexColumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 * {
     padding: 0;

@@ -1,0 +1,14 @@
+.containerLogements {
+    background-color: rgb(227, 224, 224);
+    border-radius: 25px;
+    margin: 0px 100px 40px 100px;
+    padding: 40px 0px 40px 0px;
+
+    & ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 55px;
+    }
+}
