@@ -1,8 +1,8 @@
 import React from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import BannerHome from '../components/BannerHome';
-import Logements from '../components/Logements';
+import Header from '../components/Header/Header';
+import Footer from '../components/Footer/Footer';
+import BannerHome from '../components/Banner/BannerHome';
+import Logements from '../components/Logements/Logements';
 
 const Home = () => {
     return (

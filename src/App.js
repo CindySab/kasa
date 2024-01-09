@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
-import Error404 from './pages/Error404';
+import Error404 from './pages/Error404/Error404';
 import Accommodation from './pages/Accommodation';
 
 const App = () => {

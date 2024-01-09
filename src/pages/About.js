@@ -1,8 +1,8 @@
 import React from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import BannerAbout from '../components/BannerAbout';
-import Collapse from '../components/Collapse';
+import Header from '../components/Header/Header';
+import Footer from '../components/Footer/Footer';
+import BannerAbout from '../components/Banner/BannerAbout';
+import Collapse from '../components/Collapse/Collapse';
 
 const About = () => {
     return (
