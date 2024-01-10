@@ -1,14 +1,15 @@
 import React from 'react';
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
-import BannerAbout from '../components/Banner/BannerAbout';
+import Banner from '../components/Banner/Banner';
 import Collapse from '../components/Collapse/Collapse';
+import imgBannerAbout from '../assets/Images/bannerAbout.png';
 
 const About = () => {
     return (
         <div>
             <Header />
-            <BannerAbout />
+            <Banner image={imgBannerAbout} />
             <Collapse />
             <Footer />
         </div>
