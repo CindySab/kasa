@@ -1,15 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
-import axios from 'axios';
 
-const Carroussel = () => {
+const Carroussel = ({ data }) => {
     const { id } = useParams();
-    const [data, setData] = useState([]);
     const [currentSlide, setCurrentSlide] = useState(0);
-
-    useEffect(() => {
-        axios.get('/data.json').then((resp) => setData(resp.data));
-    }, []);
 
     const filteredLogements = data.filter((logement) => logement.id === id);
 
