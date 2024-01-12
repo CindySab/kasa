@@ -5,6 +5,12 @@ import Footer from '../components/Footer/Footer';
 import Carroussel from '../components/Carroussel/Carroussel';
 import InfosLogement from '../components/InfosLogement/InfosLogement';
 
+/*
+ * @brief : Composant Accommodation qui représente la page d'un logement particulier.
+ * @component
+ * @returns {JSX.Element} Le composant Accommodation rendu.
+ */
+
 const Accommodation = () => {
     const [data, setData] = useState([]);
 

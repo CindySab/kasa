@@ -5,6 +5,12 @@ import Banner from '../components/Banner/Banner';
 import Logements from '../components/Logements/Logements';
 import imgBannerHome from '../assets/Images/bannerHome.png';
 
+/*
+ * @brief : Composant Home qui représente la page d'accueil.
+ * @component
+ * @returns {JSX.Element} Le composant Home rendu.
+ */
+
 const Home = () => {
     return (
         <div className="home">

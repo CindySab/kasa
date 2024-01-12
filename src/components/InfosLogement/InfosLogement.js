@@ -3,6 +3,25 @@ import { useParams } from 'react-router-dom';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+/*
+ * @brief : Composant InfosLogement qui affiche les détails d'un logement.
+ * @component
+ * @param {object} props - Les propriétés du composant.
+ * @param {Array} props.data - Les données du logement à afficher.
+ * @returns {JSX.Element} Le composant InfosLogement rendu.
+ *
+ * @brief : Génère des étoiles en fonction de la note du logement.
+ * @function generateStars
+ * @param {number} rating - La note du logement.
+ * @returns {JSX.Element[]} Tableau d'éléments JSX représentant les étoiles.
+ *
+ * @brief : Fonction pour basculer l'état de sélection d'une section.
+ * @function toggle
+ * @param {string} section - Le nom de la section à basculer.
+ * @param {number} index - L'index de la section à basculer.
+ * @returns {void}
+ */
+
 const InfosLogement = ({ data }) => {
     const { id } = useParams();
 

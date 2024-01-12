@@ -5,6 +5,12 @@ import About from './pages/About';
 import Error404 from './pages/Error404/Error404';
 import Accommodation from './pages/Accommodation';
 
+/*
+ * @brief : Composant App qui représente l'application principale avec la logique de routage.
+ * @component
+ * @returns {JSX.Element} Le composant App rendu.
+ */
+
 const App = () => {
     return (
         <BrowserRouter>

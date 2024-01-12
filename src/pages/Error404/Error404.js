@@ -3,6 +3,12 @@ import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
 import { NavLink } from 'react-router-dom';
 
+/*
+ * @brief : Composant Error404 qui affiche une page d'erreur 404.
+ * @component
+ * @returns {JSX.Element} Le composant Error404 rendu.
+ */
+
 const Error404 = () => {
     return (
         <div>

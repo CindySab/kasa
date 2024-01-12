@@ -5,6 +5,12 @@ import Banner from '../components/Banner/Banner';
 import Collapse from '../components/Collapse/Collapse';
 import imgBannerAbout from '../assets/Images/bannerAbout.png';
 
+/*
+ * @brief : Composant About qui représente la page "À Propos".
+ * @component
+ * @returns {JSX.Element} Le composant About rendu.
+ */
+
 const About = () => {
     return (
         <div>
