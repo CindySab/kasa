@@ -7,41 +7,56 @@ const Carroussel = ({ data }) => {
 
     const filteredLogements = data.filter((logement) => logement.id === id);
 
+    if (
+        filteredLogements.length === 0 ||
+        !filteredLogements[0].pictures ||
+        !filteredLogements[0].pictures.length
+    ) {
+        return;
+    }
+
+    const totalSlides = filteredLogements[0].pictures.length;
+    const showCounterButtons = totalSlides > 1;
+
     const nextSlide = () => {
-        setCurrentSlide(
-            (prevSlide) =>
-                (prevSlide + 1) % filteredLogements[0].pictures.length
-        );
+        setCurrentSlide((prevSlide) => (prevSlide + 1) % totalSlides);
     };
 
     const prevSlide = () => {
         setCurrentSlide(
-            (prevSlide) =>
-                (prevSlide - 1 + filteredLogements[0].pictures.length) %
-                filteredLogements[0].pictures.length
+            (prevSlide) => (prevSlide - 1 + totalSlides) % totalSlides
         );
     };
 
     return (
-        <div className="carrousel-container">
-            {filteredLogements.map((logement) => (
-                <div key={logement.id}>
+        <div className="carrouselContainer">
+            {showCounterButtons && (
+                <div className="carrouselCounter">
+                    {currentSlide + 1}/{totalSlides}
+                </div>
+            )}
+            <div key={filteredLogements[0].id} className="carrouselSlide">
+                {showCounterButtons && (
                     <button
-                        className="carrousel-button carrousel-prev"
+                        className="carrouselButton carrouselPrev"
                         onClick={prevSlide}
                         alt="Précédente"
                     ></button>
+                )}
+                <div className="carrouselImageContainer">
                     <img
-                        src={logement.pictures[currentSlide]}
+                        src={filteredLogements[0].pictures[currentSlide]}
                         alt=""
-                        className="carrousel-image"
+                        className="carrouselImage"
                     />
+                </div>
+                {showCounterButtons && (
                     <button
-                        className="carrousel-button carrousel-next"
+                        className="carrouselButton carrouselNext"
                         onClick={nextSlide}
                     ></button>
-                </div>
-            ))}
+                )}
+            </div>
         </div>
     );
 };
