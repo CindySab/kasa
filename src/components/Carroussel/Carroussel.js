@@ -62,7 +62,7 @@ const Carroussel = ({ data }) => {
                 <div className="carrouselImageContainer">
                     <img
                         src={filteredLogements[0].pictures[currentSlide]}
-                        alt=""
+                        alt="Carroussel d'images"
                         className="carrouselImage"
                     />
                 </div>
@@ -70,6 +70,7 @@ const Carroussel = ({ data }) => {
                     <button
                         className="carrouselButton carrouselNext"
                         onClick={nextSlide}
+                        alt="Suivante"
                     ></button>
                 )}
             </div>

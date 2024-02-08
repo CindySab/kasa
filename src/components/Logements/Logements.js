@@ -12,7 +12,27 @@ const Logements = () => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
-        axios.get('/data.json').then((resp) => setData(resp.data));
+        let isMounted = true;
+
+        axios
+            .get('/data.json')
+            .then((resp) => {
+                if (isMounted) {
+                    setData(resp.data);
+                }
+            })
+            .catch((error) => {
+                if (isMounted) {
+                    console.error(
+                        'Erreur lors de la récupération des données :',
+                        error
+                    );
+                }
+            });
+
+        return () => {
+            isMounted = false;
+        };
     }, []);
 
     return (

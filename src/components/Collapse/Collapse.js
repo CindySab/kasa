@@ -16,7 +16,27 @@ const Collapse = () => {
     const [collapse, setData] = useState([]);
 
     useEffect(() => {
-        axios.get('/collapse.json').then((resp) => setData(resp.data));
+        let isMounted = true;
+
+        axios
+            .get('/collapse.json')
+            .then((resp) => {
+                if (isMounted) {
+                    setData(resp.data);
+                }
+            })
+            .catch((error) => {
+                if (isMounted) {
+                    console.error(
+                        'Erreur lors de la récupération des données :',
+                        error
+                    );
+                }
+            });
+
+        return () => {
+            isMounted = false;
+        };
     }, []);
 
     const [selected, setSelected] = useState([]);
